@@ -1,0 +1,1 @@
+{"name":"reachinbox-email-scheduler","private":true,"scripts":{"install:all":"npm install --prefix apps/backend && npm install --prefix apps/frontend","dev:backend":"npm run dev --prefix apps/backend","worker":"npm run worker --prefix apps/backend","dev:frontend":"npm run dev --prefix apps/frontend"}}
