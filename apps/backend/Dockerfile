@@ -3,13 +3,13 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json package-lock.json ./
 RUN npm install
 
 COPY . .
 
-RUN npx prisma generate --schema=./schema.prisma
+RUN npx prisma@6.19.0 generate --schema=prisma/schema.prisma
 
 EXPOSE 4000
 
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+CMD ["npm", "run", "dev"]
